@@ -31,12 +31,12 @@ struct HomeView: View {
                                 .padding(.leading, 40)
                                 .textInputAutocapitalization(.never)
                         }
-                        
                     
-              
+                    
+                    
                     Button(action: {
                         homeVM.validateUser()
-
+                        
                     }, label: {
                         RoundedRectangle(cornerRadius: 14)
                             .frame(height: 50)
@@ -51,28 +51,28 @@ struct HomeView: View {
                 .padding()
                 Spacer()
                 if homeVM.showError {
-                                RoundedRectangle(cornerRadius: 10)
-                                    .frame(height: 100)
-                                    .padding(10)
-                                    .foregroundColor(.red)
-                                    .overlay {
-                                        Text(homeVM.errorMessage)
-                                            .foregroundStyle(.white)
-                                            .bold()
-                                    }
+                    RoundedRectangle(cornerRadius: 10)
+                        .frame(height: 100)
+                        .padding(10)
+                        .foregroundColor(.red)
+                        .overlay {
+                            Text(homeVM.errorMessage)
+                                .foregroundStyle(.white)
+                                .bold()
+                        }
                 }
                 Spacer()
                 NavigationLink("", isActive: $homeVM.succes) {
                     Text("Hello \(homeVM.username)")
-                            }
-               
+                }
+                
             }
             
-          
             
-
+            
+            
         }
-        }
+    }
 }
 
 struct MyInputField : View {

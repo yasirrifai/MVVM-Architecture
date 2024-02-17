@@ -12,9 +12,10 @@ struct MVVMApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView(content: {
-                HomeView()
+                //                HomeView()
+                MoviesListView()
             })
-          
+            
         }
     }
 }
